@@ -1,0 +1,6 @@
+C:\VersoAPIClientProjects\VersoClientExample\VersoClientExample\bin\Debug\VersoClientExample.exe.config
+C:\VersoAPIClientProjects\VersoClientExample\VersoClientExample\obj\Debug\VersoClientExample.exe
+C:\VersoAPIClientProjects\VersoClientExample\VersoClientExample\obj\Debug\VersoClientExample.pdb
+C:\VersoAPIClientProjects\NetVersoClientExample\VersoClientExample\bin\Debug\VersoClientExample.exe.config
+C:\VersoAPIClientProjects\NetVersoClientExample\VersoClientExample\obj\Debug\VersoClientExample.exe
+C:\VersoAPIClientProjects\NetVersoClientExample\VersoClientExample\obj\Debug\VersoClientExample.pdb
