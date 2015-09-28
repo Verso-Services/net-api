@@ -6,8 +6,6 @@
 !packages/*/lib/**
 !packages/*/tools/**
 !.nuget/*
-!WEB/Images/newcp/*
-!WebJobs/packages/**
 
 # User-specific files
 *.suo
@@ -19,15 +17,15 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
+![Dd]ebug/
+![Dd]ebugPublic/
+![Rr]elease/
+![Rr]eleases/
 x64/
 x86/
 build/
 bld/
-[Bb]in/
+![Bb]in/
 [Oo]bj/
 
 # Visual Studo 2015 cache/options directory
