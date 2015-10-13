@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiUser.cs" />
     <Compile Include="ArticleInfo.cs" />
     <Compile Include="ImportArticlesBatchInfo.cs" />
     <Compile Include="Program.cs" />

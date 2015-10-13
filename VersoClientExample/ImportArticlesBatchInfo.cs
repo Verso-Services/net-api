@@ -5,19 +5,9 @@ namespace VersoClientExample
     /// <summary>
     /// Class to handle the import articles batch json object
     /// </summary>
-    public class ImportArticlesBatchInfo
+    public class ImportArticlesBatchInfo : ApiUser
     {
         #region Properties
-
-        /// <summary>
-        /// Handles the articles batch UserName to authenticate
-        /// </summary>
-        public string UserName { get; set; }
-
-        /// <summary>
-        /// Handles the articles batch password to authenticate
-        /// </summary>
-        public string Password { get; set; }
 
         /// <summary>
         /// Handles the list of articles to be imported in Verso
@@ -33,10 +23,8 @@ namespace VersoClientExample
         /// </summary>
         /// <param name="pUserName">The Articles batch user to be authenticated</param>
         /// <param name="pPassword">The Articles batch user password to authenticate</param>
-        public ImportArticlesBatchInfo(string pUserName, string pPassword)
+        public ImportArticlesBatchInfo(string pUserName, string pPassword) : base(pUserName,pPassword)
         {
-            UserName = pUserName;
-            Password = pPassword;
             Articles = new List<ArticleInfo>();
         }
 
@@ -46,10 +34,9 @@ namespace VersoClientExample
         /// <param name="pUserName">The Articles batch user to be authenticated</param>
         /// <param name="pPassword">The Articles batch user password to authenticate</param>
         /// <param name="pArticles">The list of articles to be imported in Verso</param>
-        public ImportArticlesBatchInfo(string pUserName, string pPassword,  List<ArticleInfo> pArticles)
+        public ImportArticlesBatchInfo(string pUserName, string pPassword, List<ArticleInfo> pArticles)
+            : base(pUserName, pPassword)
         {
-            UserName = pUserName;
-            Password = pPassword;
             Articles = pArticles;
         }
 

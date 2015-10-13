@@ -7,7 +7,7 @@ namespace VersoClientExample
     {
         static void Main(string[] args)
         {
-            VersoClient.GetInstance().ImportArticlesBatch();
+            VersoClient.GetInstance().GetOutboundAlertLogs();
             Console.ReadLine();
         }
     }

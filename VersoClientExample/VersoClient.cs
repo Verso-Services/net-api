@@ -86,6 +86,49 @@ namespace VersoClientExample
             }
         }
 
+        /// <summary>
+        /// Import Articles Batch method example
+        /// </summary>
+        public async void GetOutboundAlertLogs()
+        {
+            // Create the htppClient
+            var httpClient = new HttpClient();
+
+            // Here you place the Verso API Url (TestUrl)
+            var url = "http://qa-verso-enterprise-service.azurewebsites.net/VersoApiService.svc/GetOutboundAlertLogs";
+
+            try
+            {
+                // Here we create a sample ApiUser Object to authenticate in Verso
+                var user = new ApiUser("mnavarro", "123");
+
+                // Serialize the user object to send in the request
+                var userJson = JsonConvert.SerializeObject(user);
+
+                // Set client properties 
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // Execute Http request
+                var response =
+                    await
+                        httpClient.PostAsync(url, new StringContent(userJson, Encoding.UTF8, "application/json"));
+
+                var readAsStringAsync = await response.Content.ReadAsStringAsync();
+
+                // Print response value (Just for testing)
+                Console.WriteLine(readAsStringAsync);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                // Handle your exception
+            }
+            finally
+            {
+                // Close client connection
+                httpClient.Dispose();
+            }
+        }
 
         #endregion
 
